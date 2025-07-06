@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>PhysicsCore\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>PhysicsCore\World</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="PhysicsCore">
+      <UniqueIdentifier>{ccf2c383-69ab-4b0d-a90c-716daf6ad5ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhysicsCore\RigidBody">
+      <UniqueIdentifier>{5bb20022-3c20-46e6-b523-46222c4d6762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PhysicsCore\World">
+      <UniqueIdentifier>{fb7a09c2-351b-4581-83ef-eef8f4416e6b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RigidBody.h">
+      <Filter>PhysicsCore\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>PhysicsCore\World</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
