@@ -1,6 +1,7 @@
 #pragma once
 #include "Include/eigen/Eigen/Dense"
 #include <tbb/parallel_for.h>
+#include <tbb/concurrent_vector.h>
 
 using namespace Eigen;
 

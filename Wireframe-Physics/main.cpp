@@ -1,14 +1,11 @@
 #include <iostream>
 #include <sstream>
-#include <mutex>
 #include <chrono>
 #include "World.h"
-// MultiThreading 7856.94 ms 
-// Normal         58722.1 ms
+
 int main() {
     auto start = std::chrono::high_resolution_clock::now();
     World world;
-    std::mutex add_mutex;
 
     tbb::parallel_for(tbb::blocked_range<size_t>(0, 100001), [&](const tbb::blocked_range<size_t>& range)
         {
@@ -18,7 +15,6 @@ int main() {
                 float z = static_cast<float>(i / 100);
                 float mass = 1.0f + (i % 10);
 
-                std::lock_guard<std::mutex> lock(add_mutex);
                 world.AddRigidBody(BodyType::Dynamic, mass, { x, y, z });
             }
         }
