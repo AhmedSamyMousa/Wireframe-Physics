@@ -1,5 +1,6 @@
 #pragma once
 #include "Include/eigen/Eigen/Dense"
+#include <tbb/parallel_for.h>
 
 using namespace Eigen;
 
